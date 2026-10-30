@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Keerthana Ravikumar - MCA Student & Aspiring Full Stack Developer based in Tamil Nadu, India. Specializing in HTML, CSS, JavaScript, PHP, MySQL, and Java." />
+  <meta name="keywords" content="Keerthana Ravikumar, Keerthana, MCA Student, Full Stack Developer, PHP MySQL, Staff Automation System, Java Developer, Portfolio" />
+  <meta name="author" content="Keerthana Ravikumar" />
+
+  <title>Keerthana Ravikumar | MCA Student & Aspiring Full Stack Developer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              blue: '#2563eb',
+              'blue-dark': '#1d4ed8',
+              'blue-light': '#eff6ff',
+              purple: '#7c3aed',
+              'purple-dark': '#6d28d9',
+              'purple-light': '#f5f3ff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-purple-100 selection:text-purple-900">
+
+  <!-- ========================================================================
+       HEADER & NAVIGATION
+       ======================================================================== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo / Brand -->
+        <a href="#home" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-1">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-white font-extrabold text-xl shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform duration-300">
+            K
+          </div>
+          <div class="flex flex-col">
+            <span class="text-lg font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors" data-editable="name">
+              Keerthana
+            </span>
+            <span class="text-xs font-semibold text-purple-600 tracking-wider uppercase" data-editable="roleShort">
+              MCA Candidate
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#home" class="nav-link text-slate-600 hover:text-blue-600">Home</a>
+          <a href="#about" class="nav-link text-slate-600 hover:text-blue-600">About</a>
+          <a href="#skills" class="nav-link text-slate-600 hover:text-blue-600">Skills</a>
+          <a href="#projects" class="nav-link text-slate-600 hover:text-blue-600">Projects</a>
+          <a href="#education" class="nav-link text-slate-600 hover:text-blue-600">Education</a>
+          <a href="#contact" class="nav-link text-slate-600 hover:text-blue-600">Contact</a>
+        </nav>
+
+        <!-- CTA & Edit Buttons (Desktop) -->
+        <div class="hidden md:flex items-center gap-3">
+          <button id="toggle-edit-mode-btn" type="button" title="Toggle Live Editing Mode" class="px-3.5 py-2 rounded-xl border border-purple-200 bg-purple-50/80 hover:bg-purple-100 text-purple-700 text-xs font-bold transition-all shadow-sm flex items-center gap-1.5 cursor-pointer">
+            <svg class="w-3.5 h-3.5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+            <span class="edit-btn-text">Edit Mode</span>
+          </button>
+          <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold hover:from-blue-700 hover:to-purple-700 shadow-md shadow-purple-600/20 hover:shadow-lg hover:shadow-purple-600/30 transform hover:-translate-y-0.5 transition-all duration-200">
+            Let's Connect
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex md:hidden">
+          <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-label="Toggle Navigation Menu" class="p-2.5 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <!-- Hamburger Icon -->
+            <svg class="hamburger-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <!-- Close Icon (Hidden by default) -->
+            <svg class="close-icon hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 bg-white/95 backdrop-blur-xl px-4 pt-3 pb-6 shadow-xl transition-all">
+      <div class="flex flex-col space-y-3">
+        <a href="#home" class="px-4 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Home</a>
+        <a href="#about" class="px-4 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">About</a>
+        <a href="#skills" class="px-4 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Skills</a>
+        <a href="#projects" class="px-4 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Projects</a>
+        <a href="#education" class="px-4 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Education</a>
+        <a href="#contact" class="px-4 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Contact</a>
+        <div class="pt-2 flex flex-col gap-2">
+          <button id="mobile-toggle-edit-btn" type="button" class="w-full py-2.5 px-4 rounded-xl border border-purple-200 bg-purple-50 text-purple-700 font-bold text-xs flex items-center justify-center gap-2">
+            <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+            <span class="edit-btn-text">Edit Mode</span>
+          </button>
+          <a href="#contact" class="block w-full text-center px-5 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-md shadow-purple-600/20">
+            Let's Connect
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main id="main-content">
+    
+    <!-- ======================================================================
+         1. HERO SECTION
+         ====================================================================== -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+      <!-- Decorative Background Glows -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-200/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div class="absolute top-1/3 right-10 w-80 h-80 bg-purple-200/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div class="absolute bottom-10 left-10 w-72 h-72 bg-blue-100/50 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Left Column: Copy & CTAs -->
+          <div class="lg:col-span-7 flex flex-col items-start text-left">
+            
+            <!-- Availability & Location Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200/80 shadow-sm text-xs font-semibold text-slate-700 mb-6">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span data-editable="heroRoleTag">MCA Student &bull; Aspiring Full Stack Developer</span>
+              <span class="text-slate-300">|</span>
+              <span class="flex items-center gap-1 text-slate-600">
+                <svg class="w-3.5 h-3.5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+                <span data-editable="location">Tamil Nadu, India</span>
+              </span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15] mb-4">
+              Hi, I'm <span class="text-gradient" data-editable="name">Keerthana</span><br />
+              Building <span class="underline decoration-blue-500/30 decoration-wavy decoration-2" data-editable="heroHighlight">Modern Web</span> Solutions.
+            </h1>
+
+            <!-- Dynamic Typing Role Subtitle -->
+            <div class="flex items-center gap-2 text-lg sm:text-xl font-bold text-slate-700 mb-6 min-h-[2.2rem]">
+              <span class="text-blue-600 font-mono text-base">&gt;</span>
+              <span id="typewriter-text" class="text-gradient">MCA Student</span>
+              <span class="typewriter-cursor"></span>
+            </div>
+
+            <!-- Introduction Paragraph -->
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl" data-editable="heroIntro">
+              An ambitious <strong>MCA student</strong> and aspiring <strong>Full Stack Developer</strong> passionate about designing clean web interfaces, architecting efficient relational databases, and solving complex problems with <strong>PHP, MySQL, and Java</strong>.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
+              <!-- View Projects -->
+              <a href="#projects" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-md shadow-blue-600/25 hover:shadow-lg hover:shadow-purple-600/35 transform hover:-translate-y-0.5 transition-all duration-200">
+                <span>View Projects</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+
+              <!-- Contact Me -->
+              <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white border border-slate-200 text-slate-800 font-semibold hover:bg-slate-50 hover:border-blue-400 hover:text-blue-600 shadow-sm transition-all duration-200">
+                <span>Contact Me</span>
+                <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </a>
+
+              <!-- Resume Button Placeholder -->
+              <a href="#contact" title="Request or view resume" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl text-slate-500 hover:text-slate-800 font-medium text-sm transition-colors">
+                <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                <span data-editable="resumeNote">Resume (Available on Request)</span>
+              </a>
+            </div>
+
+            <!-- Quick Technology Pills -->
+            <div class="mt-10 pt-8 border-t border-slate-100 flex flex-wrap items-center gap-3">
+              <span class="text-xs uppercase tracking-wider font-bold text-slate-400">Core Stack:</span>
+              <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-orange-50 text-orange-700 border border-orange-200">HTML5</span>
+              <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-sky-50 text-sky-700 border border-sky-200">CSS3</span>
+              <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-yellow-50 text-yellow-800 border border-yellow-200">JavaScript</span>
+              <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200">PHP</span>
+              <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-blue-50 text-blue-700 border border-blue-200">MySQL</span>
+              <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-purple-50 text-purple-700 border border-purple-200">Java</span>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Profile Showcase & Floating Badges -->
+          <div class="lg:col-span-5 flex justify-center relative">
+            <div class="relative w-72 sm:w-88 md:w-96 max-w-full">
+              
+              <!-- Subtle Background Glow Ring -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-full blur-2xl transform scale-105"></div>
+              
+              <!-- Profile Card Frame -->
+              <div class="relative z-10 p-3 bg-white/90 backdrop-blur-md rounded-3xl border border-slate-200/90 shadow-xl shadow-slate-200/50">
+                <div class="overflow-hidden rounded-2xl bg-gradient-to-b from-blue-50/50 to-purple-50/50 p-2">
+                  <img 
+                    src="assets/images/profile-placeholder.svg" 
+                    alt="Keerthana - MCA Student & Aspiring Full Stack Developer" 
+                    class="w-full h-auto aspect-square object-contain drop-shadow-md transition-transform duration-500 hover:scale-[1.02]"
+                    loading="eager"
+                  />
+                </div>
+              </div>
+
+              <!-- Floating Badge 1: Education (Top Left) -->
+              <div class="absolute -top-4 -left-6 sm:-left-8 z-20 animate-float-slow bg-white/95 backdrop-blur-md py-2 px-3.5 rounded-2xl border border-slate-200/90 shadow-lg shadow-purple-900/10 flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 text-sm font-bold">
+                  🎓
+                </div>
+                <div>
+                  <div class="text-[11px] font-bold text-slate-800 leading-tight" data-editable="avatarBadge1">MCA Candidate</div>
+                  <div class="text-[10px] text-slate-500" data-editable="avatarBadge1Sub">Currently Pursuing</div>
+                </div>
+              </div>
+
+              <!-- Floating Badge 2: Key Project (Bottom Right) -->
+              <div class="absolute -bottom-5 -right-4 sm:-right-6 z-20 animate-float-reverse bg-white/95 backdrop-blur-md py-2.5 px-4 rounded-2xl border border-slate-200/90 shadow-lg shadow-blue-900/10 flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-white text-base font-bold shadow-sm">
+                  ⚡
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-slate-900 leading-tight" data-editable="avatarBadge2">Staff Automation</div>
+                  <div class="text-[11px] text-blue-600 font-semibold" data-editable="avatarBadge2Sub">PHP & MySQL Project</div>
+                </div>
+              </div>
+
+              <!-- Floating Badge 3: Foundation (Bottom Left) -->
+              <div class="hidden sm:flex absolute bottom-12 -left-8 z-20 bg-white/90 backdrop-blur-md py-1.5 px-3 rounded-xl border border-slate-200 shadow-md text-[11px] font-semibold text-slate-700 items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                <span>BCA Completed</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         2. ABOUT ME SECTION
+         ====================================================================== -->
+    <section id="about" class="py-20 bg-slate-50/70 border-y border-slate-100 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-100/70 mb-3">
+            About Me
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Academic Background & <span class="text-gradient">Career Passion</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600">
+            A dedicated Computer Applications student committed to building responsive, data-driven web applications and growing into an accomplished software engineer.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Detailed Narrative -->
+          <div class="lg:col-span-7 space-y-5 text-slate-600 leading-relaxed text-base">
+            <div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+              <h3 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-blue-600"></span>
+                Who I Am
+              </h3>
+              <p data-editable="aboutWho1">
+                Hello! I am <strong>Keerthana</strong>, currently pursuing my <strong>Master of Computer Applications (MCA)</strong> after successfully completing my <strong>Bachelor of Computer Applications (BCA)</strong> in Tamil Nadu, India.
+              </p>
+              <p class="mt-3" data-editable="aboutWho2">
+                My academic journey has fostered a strong fascination for software architecture, relational database management, and interactive web technologies. I enjoy understanding how front-end user interfaces communicate seamlessly with back-end logic and normalized relational databases.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+              <h3 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-purple-600"></span>
+                My Engineering Philosophy
+              </h3>
+              <p data-editable="aboutPhilo1">
+                Whether designing a web portal like my <em>Staff Automation System</em> using PHP and MySQL, or working with core Java and JavaScript, I prioritize writing clean, maintainable, and well-structured code. I approach development with high attention to data integrity, responsive design, and intuitive user experiences.
+              </p>
+              <p class="mt-3" data-editable="aboutPhilo2">
+                I am actively seeking internship opportunities and entry-level full stack developer roles where I can contribute my programming skills, collaborate with forward-thinking teams, and continually expand my technical capabilities.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Quick Overview Cards -->
+          <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <!-- Card 1: Degree -->
+            <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-lg mb-3">
+                🎓
+              </div>
+              <div class="text-xs uppercase font-bold tracking-wider text-slate-400">Current Status</div>
+              <div class="text-base font-bold text-slate-900 mt-1" data-editable="cardStatus">MCA Student</div>
+              <p class="text-xs text-slate-500 mt-1" data-editable="cardStatusSub">Currently pursuing postgraduate degree; BCA completed.</p>
+            </div>
+
+            <!-- Card 2: Location -->
+            <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-purple-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-lg mb-3">
+                📍
+              </div>
+              <div class="text-xs uppercase font-bold tracking-wider text-slate-400">Location</div>
+              <div class="text-base font-bold text-slate-900 mt-1" data-editable="location">Tamil Nadu, India</div>
+              <p class="text-xs text-slate-500 mt-1">Open to on-site, hybrid, and remote opportunities.</p>
+            </div>
+
+            <!-- Card 3: Core Focus -->
+            <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-lg mb-3">
+                💻
+              </div>
+              <div class="text-xs uppercase font-bold tracking-wider text-slate-400">Core Focus</div>
+              <div class="text-base font-bold text-slate-900 mt-1" data-editable="cardFocus">Full Stack & RDBMS</div>
+              <p class="text-xs text-slate-500 mt-1">Web applications, relational schema design, CRUD workflows.</p>
+            </div>
+
+            <!-- Card 4: Main Interests -->
+            <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-purple-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-violet-50 text-violet-600 flex items-center justify-center font-bold text-lg mb-3">
+                🚀
+              </div>
+              <div class="text-xs uppercase font-bold tracking-wider text-slate-400">Career Goal</div>
+              <div class="text-base font-bold text-slate-900 mt-1" data-editable="cardGoal">Software Developer</div>
+              <p class="text-xs text-slate-500 mt-1">Building impactful digital systems and enterprise tools.</p>
+            </div>
+
+            <!-- Highlight Banner spanning full width of right col -->
+            <div class="sm:col-span-2 p-5 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md">
+              <div class="flex items-start gap-3">
+                <span class="text-2xl">💡</span>
+                <div>
+                  <h4 class="font-bold text-sm">Key Strengths</h4>
+                  <p class="text-xs text-blue-50 mt-1 leading-relaxed">
+                    Strong foundational logic &bull; Relational database structuring &bull; Clean code principles &bull; Fast learner & passionate about practical engineering.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         3. SKILLS SECTION
+         ====================================================================== -->
+    <section id="skills" class="py-20 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-100/70 mb-3">
+            Technical Competencies
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Skills & <span class="text-gradient">Proficiencies</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600">
+            A comprehensive toolkit developed through academic coursework, self-directed practice, and hands-on project engineering.
+          </p>
+
+          <!-- Category Filter Tabs -->
+          <div class="mt-8 flex flex-wrap justify-center gap-2">
+            <button type="button" data-filter="all" class="skill-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-blue-600 text-white shadow-md">
+              All Skills
+            </button>
+            <button type="button" data-filter="frontend" class="skill-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-blue-400">
+              Frontend
+            </button>
+            <button type="button" data-filter="backend-db" class="skill-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-blue-400">
+              Backend & Database
+            </button>
+            <button type="button" data-filter="core" class="skill-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 border border-slate-200 hover:border-blue-400">
+              Core Programming
+            </button>
+          </div>
+        </div>
+
+        <!-- Skills Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- 1. HTML -->
+          <div class="skill-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="frontend">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <!-- HTML Icon SVG -->
+                  <div class="w-12 h-12 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center p-2.5">
+                    <svg class="w-full h-full text-orange-600" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2L3 5l2 15 7 2 7-2 2-15-9-3zm6.3 5.4l-.3 3.6h-6V13h5.7l-.6 6.3-5.1 1.4-5.1-1.4-.4-4.3h2.3l.2 2.3 3 .8 3-.8.3-3.2H6.9l-.6-6.6h12z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-slate-900" data-editable="skill-0-name">HTML5</h3>
+                    <span class="text-xs font-semibold text-orange-600 bg-orange-50 px-2 py-0.5 rounded">Frontend</span>
+                  </div>
+                </div>
+                <span class="text-sm font-bold text-slate-700" data-editable="skill-0-level">90%</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4" data-editable="skill-0-desc">
+                Semantic structuring, accessible markup (ARIA), modern form controls, audio/video integration, and SEO fundamentals.
+              </p>
+            </div>
+            <!-- Progress Bar -->
+            <div>
+              <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                <div class="skill-bar-fill h-2.5 rounded-full bg-gradient-to-r from-orange-500 to-amber-500" data-skill-index="0" data-level="90"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. CSS -->
+          <div class="skill-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="frontend">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <!-- CSS Icon SVG -->
+                  <div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center p-2.5">
+                    <svg class="w-full h-full text-sky-600" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2L3 5l2 15 7 2 7-2 2-15-9-3zm6.2 5.5l-.2 2.2H8.3l.2 2.2h9.5l-.6 6.5-5.4 1.5-5.4-1.5-.4-3.8h2.3l.2 1.8 3.3.9 3.3-.9.3-3.6H6.1L5.3 4h13.3l-.2 3.5z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-slate-900" data-editable="skill-1-name">CSS3 / Responsive</h3>
+                    <span class="text-xs font-semibold text-sky-600 bg-sky-50 px-2 py-0.5 rounded">Frontend & Styling</span>
+                  </div>
+                </div>
+                <span class="text-sm font-bold text-slate-700" data-editable="skill-1-level">85%</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4" data-editable="skill-1-desc">
+                Flexbox, CSS Grid layouts, media queries for mobile responsiveness, keyframe animations, and modern utility classes (TailwindCSS).
+              </p>
+            </div>
+            <!-- Progress Bar -->
+            <div>
+              <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                <div class="skill-bar-fill h-2.5 rounded-full bg-gradient-to-r from-blue-500 to-sky-500" data-skill-index="1" data-level="85"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. JavaScript -->
+          <div class="skill-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="frontend">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <!-- JS Icon SVG -->
+                  <div class="w-12 h-12 rounded-xl bg-yellow-50 border border-yellow-100 flex items-center justify-center p-2.5">
+                    <svg class="w-full h-full text-yellow-600" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M3 3h18v18H3V3zm15.4 12.8c-.3-.2-.7-.4-1.3-.4-.6 0-.9.2-.9.5 0 .4.3.5 1.1.8 1.5.5 2.2 1.2 2.2 2.4 0 1.5-1.2 2.4-3.1 2.4-1.5 0-2.4-.4-3-1l.9-1.4c.4.4 1.1.8 1.9.8.7 0 1.2-.3 1.2-.7 0-.4-.4-.6-1.1-.9-1.5-.6-2.2-1.2-2.2-2.3 0-1.4 1.1-2.4 2.8-2.4 1.3 0 2.2.3 2.7.7l-.7 1.5zm-6.2-4.1v7.6c0 1.2-.6 1.8-1.7 1.8-.7 0-1.3-.2-1.7-.5l.6-1.5c.3.2.6.3.9.3.4 0 .6-.2.6-.7v-7h1.3z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-slate-900" data-editable="skill-2-name">JavaScript (ES6+)</h3>
+                    <span class="text-xs font-semibold text-yellow-700 bg-yellow-50 px-2 py-0.5 rounded">Scripting & DOM</span>
+                  </div>
+                </div>
+                <span class="text-sm font-bold text-slate-700" data-editable="skill-2-level">80%</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4" data-editable="skill-2-desc">
+                ES6+ syntax, DOM manipulation, asynchronous JavaScript (Fetch API, Promises), event handling, client-side validation, and interactive UI widgets.
+              </p>
+            </div>
+            <!-- Progress Bar -->
+            <div>
+              <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                <div class="skill-bar-fill h-2.5 rounded-full bg-gradient-to-r from-amber-500 to-yellow-400" data-skill-index="2" data-level="80"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. PHP -->
+          <div class="skill-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-purple-400 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="backend-db">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <!-- PHP Icon SVG -->
+                  <div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center p-2.5">
+                    <svg class="w-full h-full text-indigo-600" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-4.5 13H6l1.2-6h2.3c1.3 0 2 .6 1.8 1.6-.2 1.1-.9 1.7-2 1.7H7.8L7.5 15zm6.5 0h-1.5l1.2-6h2.3c1.3 0 2 .6 1.8 1.6-.2 1.1-.9 1.7-2 1.7h-1.5L14 15zm-3.2-3.3h-.7l.3-1.6h.7c.5 0 .8.2.7.6-.1.4-.4.6-.7.6zm6.5 0h-.7l.3-1.6h.7c.5 0 .8.2.7.6-.1.4-.4.6-.7.6z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-slate-900" data-editable="skill-3-name">PHP</h3>
+                    <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Server-Side Backend</span>
+                  </div>
+                </div>
+                <span class="text-sm font-bold text-slate-700" data-editable="skill-3-level">85%</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4" data-editable="skill-3-desc">
+                Server-side script architecture, session & cookie authentication, form handling, PDO & MySQLi database connectivity, and backend CRUD modules.
+              </p>
+            </div>
+            <!-- Progress Bar -->
+            <div>
+              <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                <div class="skill-bar-fill h-2.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600" data-skill-index="3" data-level="85"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. MySQL -->
+          <div class="skill-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-purple-400 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="backend-db">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <!-- MySQL Icon SVG -->
+                  <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center p-2.5">
+                    <svg class="w-full h-full text-blue-700" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 4.24 2 7v10c0 2.76 4.48 5 10 5s10-2.24 10-5V7c0-2.76-4.48-5-10-5zm0 2c4.41 0 8 1.57 8 3s-3.59 3-8 3-8-1.57-8-3 3.59-3 8-3zm0 16c-4.41 0-8-1.57-8-3v-2.23c1.94 1.34 4.8 2.23 8 2.23s6.06-.89 8-2.23V17c0 1.43-3.59 3-8 3zm0-5c-4.41 0-8-1.57-8-3v-2.23c1.94 1.34 4.8 2.23 8 2.23s6.06-.89 8-2.23V12c0 1.43-3.59 3-8 3z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-slate-900" data-editable="skill-4-name">MySQL</h3>
+                    <span class="text-xs font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded">Relational Databases</span>
+                  </div>
+                </div>
+                <span class="text-sm font-bold text-slate-700" data-editable="skill-4-level">85%</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4" data-editable="skill-4-desc">
+                Relational schema modeling, normalization (1NF, 2NF, 3NF), complex SQL queries (INNER/LEFT JOINs, subqueries, aggregations), and data integrity constraints.
+              </p>
+            </div>
+            <!-- Progress Bar -->
+            <div>
+              <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                <div class="skill-bar-fill h-2.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600" data-skill-index="4" data-level="85"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Java -->
+          <div class="skill-card p-6 rounded-2xl bg-white border border-slate-200 hover:border-purple-400 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="core">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <!-- Java Icon SVG -->
+                  <div class="w-12 h-12 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-center p-2.5">
+                    <svg class="w-full h-full text-purple-700" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M10.5 16.5c-2.5-.2-4.5-.6-4.5-1.5 0-.8 1.6-1.2 3.8-1.4.6 0 1.2 0 1.8.1.7.1 1.4.2 2 .4.8-.4 1.6-1 1.6-1.8 0-1.2-1.5-1.9-3.7-1.9-3.3 0-5.9 1.2-5.9 2.9 0 1.5 2 2.6 4.9 2.8v.4zm8.5-7.5c-.2-.8-.7-1.4-1.3-1.8.4-.7.6-1.5.6-2.2 0-2.3-2.2-3-4.3-3-1.8 0-3.5.7-4.2 1.8-.4.6-.6 1.4-.6 2.2 0 .9.3 1.8.8 2.5-1.3.8-2 1.9-2 3.1 0 2.4 2.8 3.9 6.7 3.9 4.3 0 7.3-1.9 7.3-4.5 0-.8-.3-1.5-.9-2zm-6.2-5.3c1.2 0 2.2.4 2.2 1.4 0 .9-.8 1.4-2.2 1.4s-2.2-.5-2.2-1.4c0-1 .9-1.4 2.2-1.4z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-slate-900" data-editable="skill-5-name">Java</h3>
+                    <span class="text-xs font-semibold text-purple-700 bg-purple-50 px-2 py-0.5 rounded">Core Programming</span>
+                  </div>
+                </div>
+                <span class="text-sm font-bold text-slate-700" data-editable="skill-5-level">80%</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4" data-editable="skill-5-desc">
+                Object-Oriented Programming (Inheritance, Polymorphism, Encapsulation, Abstraction), Collections framework, Exception Handling, File I/O, and JDBC concepts.
+              </p>
+            </div>
+            <!-- Progress Bar -->
+            <div>
+              <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                <div class="skill-bar-fill h-2.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-700" data-skill-index="5" data-level="80"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Additional Academic & Developer Toolkit -->
+        <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div>
+              <h4 class="text-lg font-bold text-slate-900">Developer Workflow & Practical Foundations</h4>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                Complementary tools, environments, and core computer science methodologies practiced during academic coursework.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">
+                Git & GitHub Version Control
+              </span>
+              <span class="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">
+                XAMPP & Apache Server
+              </span>
+              <span class="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">
+                RESTful API Principles
+              </span>
+              <span class="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">
+                Relational DB Normalization
+              </span>
+              <span class="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">
+                Software Development Life Cycle (SDLC)
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         4. PROJECTS SECTION (FEATURED: STAFF AUTOMATION SYSTEM)
+         ====================================================================== -->
+    <section id="projects" class="py-20 bg-slate-50/70 border-t border-slate-100 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-100/70 mb-3">
+            Portfolio Showcase
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Featured <span class="text-gradient">Projects</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600">
+            Real-world academic systems architected with robust backend programming, secure database handling, and user-centric interfaces.
+          </p>
+        </div>
+
+        <!-- Featured Project Spotlight: Staff Automation System -->
+        <div class="mb-16 bg-white rounded-3xl border border-slate-200/90 shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+          
+          <!-- Mock Browser Window Header -->
+          <div class="bg-slate-100/90 border-b border-slate-200 px-6 py-3.5 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-400 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
+              <span class="ml-3 text-xs font-mono text-slate-500 hidden sm:inline-block">https://staff-automation-system.local</span>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">
+              <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+              Main Capstone Project
+            </div>
+          </div>
+
+          <!-- Project Body Content -->
+          <div class="p-6 sm:p-8 lg:p-10">
+            <!-- Visual Dashboard Preview Banner -->
+            <div class="mb-8 rounded-2xl overflow-hidden border border-slate-200/80 shadow-md bg-slate-100 group relative">
+              <img 
+                src="assets/images/project-staff-automation.svg" 
+                alt="Staff Automation System Dashboard Interface Preview" 
+                class="w-full h-auto object-cover transform group-hover:scale-[1.008] transition-transform duration-500"
+                loading="lazy"
+              />
+              <div class="absolute bottom-3 right-3 px-3 py-1 rounded-lg bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-mono flex items-center gap-1.5 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                Web-Based Administrative Portal
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              
+              <!-- Left Column: Description & Feature Grid -->
+              <div class="lg:col-span-7">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                  <span class="px-3 py-1 rounded-lg text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">PHP</span>
+                  <span class="px-3 py-1 rounded-lg text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200">MySQL</span>
+                  <span class="px-3 py-1 rounded-lg text-xs font-bold bg-orange-50 text-orange-700 border border-orange-200">HTML5</span>
+                  <span class="px-3 py-1 rounded-lg text-xs font-bold bg-sky-50 text-sky-700 border border-sky-200">CSS3</span>
+                  <span class="px-3 py-1 rounded-lg text-xs font-bold bg-yellow-50 text-yellow-800 border border-yellow-200">JavaScript</span>
+                </div>
+
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-4" data-editable="projectTitle">
+                  Staff Automation System
+                </h3>
+
+                <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-6" data-editable="projectDesc">
+                  A comprehensive, web-based management system engineered for educational and institutional environments. The platform streamlines and automates administrative record-keeping, replacing paper-intensive manual workflows with a centralized relational database hub.
+                </p>
+
+                <!-- Core Capabilities Highlighted -->
+                <h4 class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-3">
+                  Key System Modules & Capabilities:
+                </h4>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8">
+                  
+                  <div class="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                    <svg class="w-5 h-5 text-blue-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                    <div>
+                      <strong class="text-xs font-bold text-slate-900 block">Staff Details Management</strong>
+                      <span class="text-[11px] text-slate-500">Secure storage of personal, demographic, and contact profiles.</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                    <svg class="w-5 h-5 text-purple-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
+                    </svg>
+                    <div>
+                      <strong class="text-xs font-bold text-slate-900 block">Academic Qualifications</strong>
+                      <span class="text-[11px] text-slate-500">Chronological repository for degrees, certifications, and specializations.</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                    <svg class="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <div>
+                      <strong class="text-xs font-bold text-slate-900 block">Professional Experience</strong>
+                      <span class="text-[11px] text-slate-500">Service duration, past designations, and institutional promotions.</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                    <svg class="w-5 h-5 text-blue-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                    <div>
+                      <strong class="text-xs font-bold text-slate-900 block">Publications & Research</strong>
+                      <span class="text-[11px] text-slate-500">Catalog of research papers, international journals, conferences, and patents.</span>
+                    </div>
+                  </div>
+
+                  <div class="sm:col-span-2 flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                    <svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <div>
+                      <strong class="text-xs font-bold text-slate-900 block">Automated Reports & Analytics</strong>
+                      <span class="text-[11px] text-slate-500">Dynamic queries generating faculty summary sheets, compliance documents, and departmental audits.</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Action Buttons for Main Project -->
+                <div class="flex flex-wrap items-center gap-3">
+                  <button type="button" class="open-project-modal inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-sm shadow-md shadow-blue-600/20 hover:shadow-lg hover:shadow-purple-600/30 transform hover:-translate-y-0.5 transition-all">
+                    <span>View System Architecture</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    </svg>
+                  </button>
+
+                  <!-- GitHub Link -->
+                  <a href="https://github.com/gokulkeerthana230-rgb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-blue-600 hover:border-blue-400 font-semibold text-sm transition-all shadow-sm">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                    </svg>
+                    <span>View on GitHub</span>
+                  </a>
+
+                  <!-- Live / Local Demo Placeholder -->
+                  <a href="#contact" class="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl text-slate-500 hover:text-slate-800 text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span>Academic Project Completed</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Column: Interactive Diagram / UI Preview Card -->
+              <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-6 shadow-inner border border-slate-700">
+                <div class="flex items-center justify-between pb-4 border-b border-slate-700/80 mb-5">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+                    <span class="text-xs font-mono text-slate-300">System Architecture Overview</span>
+                  </div>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-700/80 text-blue-300">PHP &bull; MySQL</span>
+                </div>
+
+                <!-- Schematic Flow -->
+                <div class="space-y-3 font-mono text-xs">
+                  
+                  <!-- Flow 1: Client Layer -->
+                  <div class="p-3 rounded-xl bg-slate-800/90 border border-slate-700 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="text-blue-400 font-bold">1. Client Layer</span>
+                    </div>
+                    <span class="text-[11px] text-slate-400">HTML5 / CSS3 / JS UI</span>
+                  </div>
+
+                  <!-- Arrow -->
+                  <div class="flex justify-center text-slate-500 text-xs py-0.5">
+                    &darr; HTTP Requests / Session Auth
+                  </div>
+
+                  <!-- Flow 2: Application Layer -->
+                  <div class="p-3 rounded-xl bg-slate-800/90 border border-slate-700 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="text-purple-400 font-bold">2. Server Logic</span>
+                    </div>
+                    <span class="text-[11px] text-slate-400">PHP Modular Controllers</span>
+                  </div>
+
+                  <!-- Arrow -->
+                  <div class="flex justify-center text-slate-500 text-xs py-0.5">
+                    &darr; Prepared PDO / MySQLi Queries
+                  </div>
+
+                  <!-- Flow 3: Database Layer -->
+                  <div class="p-3 rounded-xl bg-slate-800/90 border border-slate-700 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="text-emerald-400 font-bold">3. Database Schema</span>
+                    </div>
+                    <span class="text-[11px] text-slate-400">MySQL Normalized Tables</span>
+                  </div>
+
+                </div>
+
+                <!-- Database Entities Preview -->
+                <div class="mt-5 pt-4 border-t border-slate-700 text-xs">
+                  <span class="text-slate-400 text-[11px] block mb-2 font-mono uppercase tracking-wider">Key Relational Entities:</span>
+                  <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                    <span class="px-2 py-1 rounded bg-slate-700 text-slate-300">tbl_staff</span>
+                    <span class="px-2 py-1 rounded bg-slate-700 text-slate-300">tbl_qualifications</span>
+                    <span class="px-2 py-1 rounded bg-slate-700 text-slate-300">tbl_experience</span>
+                    <span class="px-2 py-1 rounded bg-slate-700 text-slate-300">tbl_publications</span>
+                    <span class="px-2 py-1 rounded bg-slate-700 text-slate-300">tbl_reports</span>
+                  </div>
+                </div>
+
+                <div class="mt-5">
+                  <button type="button" class="open-project-modal w-full text-center py-2 px-3 rounded-xl bg-blue-600/30 hover:bg-blue-600/50 text-blue-300 text-xs font-semibold transition-colors border border-blue-500/30">
+                    Click to Inspect Detailed Architecture &rarr;
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary Projects / Academic Portfolio Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Secondary Project 1: Personal Portfolio -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+            <div>
+              <div class="mb-5 rounded-2xl overflow-hidden border border-slate-100 shadow-sm bg-slate-50">
+                <img src="assets/images/project-ecommerce.svg" alt="Interactive Web Project Preview" class="w-full h-44 object-cover" loading="lazy" />
+              </div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200">
+                  Frontend Development
+                </span>
+                <span class="text-xs text-slate-400 font-mono">Live Portfolio</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Modern Responsive Portfolio Website</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Designed and built a fast, modern portfolio featuring responsive navigation, mobile drawer menu, dynamic DOM filtering, IntersectionObserver scroll-driven progress bars, and zero-dependency static deployment for GitHub Pages and Vercel.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2.5 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-700">HTML5</span>
+                <span class="px-2.5 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-700">CSS3 / TailwindCSS</span>
+                <span class="px-2.5 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-700">Vanilla ES6+ JavaScript</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-100 text-xs">
+              <span class="text-emerald-600 font-semibold flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Fully Responsive
+              </span>
+              <a href="#home" class="text-blue-600 hover:text-blue-800 font-semibold">Current Website &uarr;</a>
+            </div>
+          </div>
+
+          <!-- Secondary Project 2: Student Database & Management (Academic Java) -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+            <div>
+              <div class="mb-5 rounded-2xl overflow-hidden border border-slate-100 shadow-sm bg-slate-50">
+                <img src="assets/images/project-student-mgmt.svg" alt="Student Database Application Preview" class="w-full h-44 object-cover" loading="lazy" />
+              </div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-purple-50 text-purple-700 border border-purple-200">
+                  Academic Java & SQL
+                </span>
+                <span class="text-xs text-slate-400 font-mono">Core CS Project</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Student Records & Database Manager</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                An academic database management application written in Java and MySQL exploring Object-Oriented principles, JDBC connectivity, transactional records management, and automated grade summary calculations.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2.5 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-700">Java</span>
+                <span class="px-2.5 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-700">MySQL</span>
+                <span class="px-2.5 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-700">JDBC</span>
+                <span class="px-2.5 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-700">OOP</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-100 text-xs">
+              <span class="text-slate-500 font-medium">Academic Laboratory Work</span>
+              <a href="https://github.com/gokulkeerthana230-rgb" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-semibold">GitHub Profile &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         5. EDUCATION SECTION
+         ====================================================================== -->
+    <section id="education" class="py-20 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-100/70 mb-3">
+            Academic Milestones
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Education & <span class="text-gradient">Qualifications</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600">
+            A continuous pathway in Computer Applications, blending foundational computing science with modern advanced software technologies.
+          </p>
+        </div>
+
+        <!-- Vertical Timeline Container -->
+        <div class="timeline-container max-w-4xl mx-auto pl-10 md:pl-0">
+
+          <!-- Timeline Item 1: MCA (Currently Pursuing) -->
+          <div class="timeline-item relative md:grid md:grid-cols-2 md:gap-12 mb-12">
+            <!-- Timeline Dot -->
+            <div class="timeline-dot"></div>
+
+            <!-- Left column on Desktop: Period & Status -->
+            <div class="md:text-right pr-0 md:pr-6 mb-2 md:mb-0">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-purple-100 text-purple-700 mb-1" data-editable="eduMcaStatus">
+                Currently Pursuing
+              </span>
+              <div class="text-lg font-bold text-slate-900" data-editable="eduMcaDegree">Master of Computer Applications (MCA)</div>
+              <div class="text-sm font-medium text-purple-600">Postgraduate Degree</div>
+              <div class="text-xs text-slate-500 mt-1 flex items-center md:justify-end gap-1">
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+                <span data-editable="eduMcaCollege">[Your College / University Name, Tamil Nadu, India]</span>
+              </div>
+            </div>
+
+            <!-- Right column on Desktop: Details Card -->
+            <div class="pl-0 md:pl-6">
+              <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-purple-300 hover:shadow-md transition-all">
+                <h4 class="text-base font-bold text-slate-900 mb-2">Advanced Software Engineering & Systems</h4>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4" data-editable="eduMcaDesc">
+                  Focusing on advanced computer applications, enterprise application architecture, relational database management systems (RDBMS), object-oriented analysis, and scalable web engineering.
+                </p>
+                <div class="space-y-1.5 text-xs text-slate-700">
+                  <div class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
+                    <span>Advanced Database Management & SQL Optimization</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
+                    <span>Full-Stack Web Development & Modern Web Standards</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
+                    <span>Software Engineering Methodologies & Project Design</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: BCA (Completed) -->
+          <div class="timeline-item relative md:grid md:grid-cols-2 md:gap-12">
+            <!-- Timeline Dot -->
+            <div class="timeline-dot"></div>
+
+            <!-- Left column on Desktop: Period & Status -->
+            <div class="md:text-right pr-0 md:pr-6 mb-2 md:mb-0">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-700 mb-1" data-editable="eduBcaStatus">
+                Completed
+              </span>
+              <div class="text-lg font-bold text-slate-900" data-editable="eduBcaDegree">Bachelor of Computer Applications (BCA)</div>
+              <div class="text-sm font-medium text-blue-600">Undergraduate Degree</div>
+              <div class="text-xs text-slate-500 mt-1 flex items-center md:justify-end gap-1">
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+                <span data-editable="eduBcaCollege">[Your College / University Name, Tamil Nadu, India]</span>
+              </div>
+            </div>
+
+            <!-- Right column on Desktop: Details Card -->
+            <div class="pl-0 md:pl-6">
+              <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+                <h4 class="text-base font-bold text-slate-900 mb-2">Foundational Computing & Programming Core</h4>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4" data-editable="eduBcaDesc">
+                  Built a solid foundation in computer science core principles, algorithmic thinking, object-oriented programming in Java and C++, relational database concepts, and internet technologies.
+                </p>
+                <div class="space-y-1.5 text-xs text-slate-700">
+                  <div class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                    <span>Core Java, C/C++, and Object-Oriented Programming</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                    <span>Data Structures, Algorithms & Logic Building</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                    <span>Relational Databases (SQL) & Web Basics (HTML/CSS)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         6. CONTACT SECTION
+         ====================================================================== -->
+    <section id="contact" class="py-20 bg-slate-50/70 border-t border-slate-100 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-100/70 mb-3">
+            Get In Touch
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Let's Start a <span class="text-gradient">Conversation</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600">
+            Interested in discussing full-time opportunities, internship roles, or technical collaborations? Feel free to send a message!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Left Column: Contact Cards & Editable Placeholders -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <div class="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm space-y-6">
+              <h3 class="text-xl font-bold text-slate-900">Contact Information</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                I am based in <strong>Tamil Nadu, India</strong> and always open to discussing web development, database engineering, and software engineering opportunities.
+              </p>
+
+              <!-- 1. Email -->
+              <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-300 transition-all">
+                <div class="w-11 h-11 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Email Address</div>
+                  <a href="mailto:gokulkeerthana230@gmail.com" class="text-sm font-semibold text-slate-900 hover:text-blue-600 truncate block mt-0.5" data-editable="contactEmail">
+                    gokulkeerthana230@gmail.com
+                  </a>
+                  <button id="copy-email-btn" type="button" class="mt-1.5 inline-flex items-center gap-1 text-[11px] font-semibold text-blue-600 hover:text-blue-800 cursor-pointer">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>Click to Copy Email</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 2. LinkedIn -->
+              <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-300 transition-all">
+                <div class="w-11 h-11 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.77v8.37H6.46v-8.37M7.84 6.2a1.62 1.62 0 1 0 1.62 1.62A1.62 1.62 0 0 0 7.84 6.2z"/>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs font-bold uppercase tracking-wider text-slate-400">LinkedIn Profile</div>
+                  <a href="https://linkedin.com/in/keerthana-ravikumar" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-900 hover:text-blue-600 truncate block mt-0.5" data-editable="contactLinkedin">
+                    linkedin.com/in/keerthana-ravikumar
+                  </a>
+                  <span class="text-[11px] text-slate-500 mt-1 block">Keerthana Ravikumar &bull; Opens in new tab</span>
+                </div>
+              </div>
+
+              <!-- 3. GitHub -->
+              <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-purple-300 transition-all">
+                <div class="w-11 h-11 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs font-bold uppercase tracking-wider text-slate-400">GitHub Profile</div>
+                  <a href="https://github.com/gokulkeerthana230-rgb" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-900 hover:text-purple-600 truncate block mt-0.5" data-editable="contactGithub">
+                    github.com/gokulkeerthana230-rgb
+                  </a>
+                  <span class="text-[11px] text-slate-500 mt-1 block">gokulkeerthana230-rgb &bull; Open source projects</span>
+                </div>
+              </div>
+
+              <!-- 4. Location -->
+              <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                <div class="w-11 h-11 rounded-xl bg-slate-200 text-slate-700 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Location</div>
+                  <div class="text-sm font-semibold text-slate-900 mt-0.5" data-editable="location">Tamil Nadu, India</div>
+                  <span class="text-[11px] text-slate-500">Available for relocation & remote roles</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Working Contact Form -->
+          <div class="lg:col-span-7">
+            <div class="p-6 sm:p-10 rounded-3xl bg-white border border-slate-200/90 shadow-sm">
+              <h3 class="text-2xl font-bold text-slate-900 mb-2">Send a Direct Message</h3>
+              <p class="text-xs sm:text-sm text-slate-500 mb-6">
+                Fill in the details below. This form features real-time validation and can be connected directly to Formspree, EmailJS, or any custom API backend.
+              </p>
+
+              <!-- In-form status banner -->
+              <div id="contact-status-box" class="hidden mb-6"></div>
+
+              <form id="contact-form" novalidate class="space-y-5">
+                
+                <!-- Grid: Name & Email -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="contact-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Your Full Name <span class="text-rose-500">*</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      id="contact-name" 
+                      name="name" 
+                      required 
+                      placeholder="e.g. Priyadharshini" 
+                      class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm text-slate-900 transition-all placeholder:text-slate-400"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="contact-email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Your Email Address <span class="text-rose-500">*</span>
+                    </label>
+                    <input 
+                      type="email" 
+                      id="contact-email" 
+                      name="email" 
+                      required 
+                      placeholder="e.g. name@company.com" 
+                      class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm text-slate-900 transition-all placeholder:text-slate-400"
+                    />
+                  </div>
+                </div>
+
+                <!-- Subject -->
+                <div>
+                  <label for="contact-subject" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                    Subject <span class="text-rose-500">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="contact-subject" 
+                    name="subject" 
+                    required 
+                    placeholder="e.g. Internship Opportunity / Full Stack Role" 
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm text-slate-900 transition-all placeholder:text-slate-400"
+                  />
+                </div>
+
+                <!-- Message -->
+                <div>
+                  <label for="contact-message" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                    Your Message <span class="text-rose-500">*</span>
+                  </label>
+                  <textarea 
+                    id="contact-message" 
+                    name="message" 
+                    rows="4" 
+                    required 
+                    placeholder="Hello Keerthana, I came across your portfolio and would like to discuss..." 
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm text-slate-900 transition-all placeholder:text-slate-400 resize-none"
+                  ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                  <button 
+                    id="contact-submit-btn" 
+                    type="submit" 
+                    class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-sm shadow-md shadow-blue-600/20 hover:shadow-lg hover:shadow-purple-600/30 transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-75 disabled:pointer-events-none"
+                  >
+                    <span>Send Message</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                  </button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="bg-white border-t border-slate-200 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Brand & Bio snippet -->
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-white font-extrabold text-base shadow-sm">
+            K
+          </div>
+          <div>
+            <div class="text-sm font-bold text-slate-900" data-editable="name">Keerthana</div>
+            <div class="text-xs text-slate-500" data-editable="footerBio">MCA Student &bull; Aspiring Full Stack Developer</div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm font-medium text-slate-600">
+          <a href="#home" class="hover:text-blue-600 transition-colors">Home</a>
+          <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
+          <a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a>
+          <a href="#projects" class="hover:text-blue-600 transition-colors">Projects</a>
+          <a href="#education" class="hover:text-blue-600 transition-colors">Education</a>
+          <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex items-center gap-2.5">
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/keerthana-ravikumar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn: Keerthana Ravikumar" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-blue-600 flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.77v8.37H6.46v-8.37M7.84 6.2a1.62 1.62 0 1 0 1.62 1.62A1.62 1.62 0 0 0 7.84 6.2z"/>
+            </svg>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/gokulkeerthana230-rgb" target="_blank" rel="noopener noreferrer" aria-label="GitHub: gokulkeerthana230-rgb" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-purple-50 text-slate-600 hover:text-purple-600 flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </a>
+          <!-- Email Mailto -->
+          <a href="mailto:gokulkeerthana230@gmail.com" aria-label="Email: gokulkeerthana230@gmail.com" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-blue-600 flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <p>&copy; <span id="current-year"></span> Keerthana. All rights reserved. Built with HTML5, CSS3 & JavaScript.</p>
+        <p>Tamil Nadu, India &bull; MCA Student Portfolio</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================
+       BACK TO TOP BUTTON
+       ======================================================================== -->
+  <button 
+    id="back-to-top" 
+    type="button" 
+    aria-label="Back to Top" 
+    class="fixed bottom-6 right-6 z-40 p-3 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-purple-600/30 opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-400"
+  >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  </button>
+
+
+  <!-- ========================================================================
+       PROJECT DETAILS MODAL (STAFF AUTOMATION SYSTEM)
+       ======================================================================== -->
+  <div id="project-modal" class="hidden fixed inset-0 z-50 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    
+    <!-- Backdrop Overlay -->
+    <div class="modal-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"></div>
+
+    <div class="min-h-screen px-4 text-center flex items-center justify-center p-4">
+      <div class="modal-content inline-block w-full max-w-4xl p-6 sm:p-8 my-8 text-left align-middle bg-white rounded-3xl shadow-2xl relative z-10 border border-slate-200">
+        
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between pb-5 border-b border-slate-100 mb-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-md bg-blue-50 text-blue-700 text-xs font-bold mb-1">
+              <span>Full System Breakdown</span>
+            </div>
+            <h3 id="modal-title" class="text-2xl font-extrabold text-slate-900">Staff Automation System</h3>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">PHP, MySQL, HTML5, CSS3 & JavaScript Architecture</p>
+          </div>
+
+          <button type="button" class="close-project-modal p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" aria-label="Close Modal">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Modal Body Content -->
+        <div class="space-y-6 text-sm text-slate-600">
+          
+          <!-- Summary Box -->
+          <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-100 text-slate-700">
+            <h4 class="font-bold text-blue-900 text-sm mb-1">Project Summary</h4>
+            <p class="text-xs leading-relaxed">
+              The <strong>Staff Automation System</strong> is a centralized web application created to simplify and digitize administrative processes across collegiate academic departments. Instead of manual filing, all staff data is categorized, secured, and easily retrievable by administrative staff.
+            </p>
+          </div>
+
+          <!-- Modules Detailed -->
+          <div>
+            <h4 class="font-bold text-slate-900 text-base mb-3">Core Modules & Implementation Details</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+              
+              <div class="p-3.5 rounded-xl border border-slate-200 bg-white">
+                <span class="font-bold text-slate-900 block mb-1">1. Staff Profile & Demographics</span>
+                <p class="text-slate-600">Stores faculty personal info, official email, contact number, blood group, emergency contacts, date of joining, and department mapping.</p>
+              </div>
+
+              <div class="p-3.5 rounded-xl border border-slate-200 bg-white">
+                <span class="font-bold text-slate-900 block mb-1">2. Academic Qualifications</span>
+                <p class="text-slate-600">Detailed records of undergraduate, postgraduate, and doctorate degrees, granting institutions, passing years, and specialized research disciplines.</p>
+              </div>
+
+              <div class="p-3.5 rounded-xl border border-slate-200 bg-white">
+                <span class="font-bold text-slate-900 block mb-1">3. Professional Experience</span>
+                <p class="text-slate-600">Records past teaching, research, and industrial tenures, current designations, promotions, and accumulated service duration.</p>
+              </div>
+
+              <div class="p-3.5 rounded-xl border border-slate-200 bg-white">
+                <span class="font-bold text-slate-900 block mb-1">4. Publications & Research Activities</span>
+                <p class="text-slate-600">Tracks national and international journal papers, ISBN/ISSN details, conference proceedings, workshops attended, and patent filings.</p>
+              </div>
+
+              <div class="md:col-span-2 p-3.5 rounded-xl border border-slate-200 bg-white">
+                <span class="font-bold text-slate-900 block mb-1">5. Automated Reports & Export Module</span>
+                <p class="text-slate-600">Generates instant summary reports filtered by department, experience level, or publication count. Formatted for academic audits, NAAC/NIRF reporting, and administrative review.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Relational Schema Diagram Info -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+            <h4 class="font-bold text-slate-900 text-sm mb-2">Relational Database Design (MySQL)</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs font-mono">
+              <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                <span class="text-blue-600 font-bold block">tbl_staff_master</span>
+                <span class="text-[11px] text-slate-500">PK: staff_id<br/>FK: dept_id</span>
+              </div>
+              <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                <span class="text-purple-600 font-bold block">tbl_qualifications</span>
+                <span class="text-[11px] text-slate-500">PK: qual_id<br/>FK: staff_id</span>
+              </div>
+              <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                <span class="text-indigo-600 font-bold block">tbl_publications</span>
+                <span class="text-[11px] text-slate-500">PK: pub_id<br/>FK: staff_id</span>
+              </div>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-2">
+              All tables are structured up to 3rd Normal Form (3NF) to guarantee referential integrity and eliminate redundancy.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-end gap-3">
+          <button type="button" class="close-project-modal px-5 py-2.5 rounded-xl border border-slate-200 text-slate-700 text-xs font-semibold hover:bg-slate-50">
+            Close
+          </button>
+          <a href="#contact" class="close-project-modal px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-semibold shadow-md shadow-purple-600/20 hover:shadow-lg">
+            Discuss This Project
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================
+       FLOATING EDIT CONTROLS & ACTION BAR
+       ======================================================================== -->
+  <!-- Floating Edit Pill (Bottom Left) -->
+  <div id="floating-edit-pill" class="fixed bottom-6 left-6 z-40">
+    <button id="floating-edit-btn" type="button" title="Enable Live Editing" class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-slate-900/90 hover:bg-slate-900 text-white text-xs font-bold shadow-xl border border-slate-700/80 backdrop-blur-md transition-all hover:scale-105 cursor-pointer">
+      <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+      <span>Edit Portfolio</span>
+    </button>
+  </div>
+
+  <!-- Floating Edit Mode Action Bar (Bottom Center) -->
+  <div id="edit-mode-bar" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 backdrop-blur-xl text-white px-5 py-3 rounded-2xl shadow-2xl border border-slate-700 flex flex-wrap items-center gap-3 text-xs">
+    <div class="flex items-center gap-2 pr-3 border-r border-slate-700">
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span class="font-bold">Edit Mode Active</span>
+    </div>
+    <span class="text-slate-300 hidden sm:inline">Click any highlighted text to edit in-place</span>
+    <div class="flex items-center gap-2">
+      <button id="open-editor-modal-btn" type="button" class="px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 font-semibold transition-colors cursor-pointer flex items-center gap-1.5">
+        <span>⚙️ Edit Details Panel</span>
+      </button>
+      <button id="save-edits-btn" type="button" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 font-semibold transition-colors cursor-pointer flex items-center gap-1.5">
+        <span>💾 Save Changes</span>
+      </button>
+      <button id="export-html-btn" type="button" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 font-semibold transition-colors cursor-pointer flex items-center gap-1.5">
+        <span>📥 Export HTML</span>
+      </button>
+      <button id="reset-edits-btn" type="button" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold transition-colors cursor-pointer">
+        <span>🔄 Reset</span>
+      </button>
+      <button id="exit-edit-mode-btn" type="button" title="Exit Edit Mode" class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors cursor-pointer">
+        ✕
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================
+       PORTFOLIO CUSTOMIZER & EDITOR MODAL
+       ======================================================================== -->
+  <div id="editor-modal" class="hidden fixed inset-0 z-50 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="editor-modal-title">
+    <div class="modal-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+
+    <div class="min-h-screen px-4 text-center flex items-center justify-center p-4">
+      <div class="modal-content inline-block w-full max-w-3xl p-6 sm:p-8 my-8 text-left bg-white rounded-3xl shadow-2xl relative z-10 border border-slate-200">
+        
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-5">
+          <div>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-purple-50 text-purple-700 text-xs font-bold mb-1">
+              <span>Quick Customizer</span>
+            </div>
+            <h3 id="editor-modal-title" class="text-xl sm:text-2xl font-extrabold text-slate-900">
+              Edit Portfolio Details
+            </h3>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Customize your name, college names, skill percentages, and social links. Saves directly to browser storage.
+            </p>
+          </div>
+          <button type="button" class="close-editor-modal p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer" aria-label="Close Editor">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+        <!-- Customizer Tabs -->
+        <div class="flex flex-wrap items-center gap-1.5 pb-4 border-b border-slate-100 text-xs font-semibold">
+          <button type="button" class="editor-tab-btn active px-3.5 py-2 rounded-xl bg-blue-600 text-white transition-all cursor-pointer" data-tab="tab-edit-personal">
+            👤 Personal & Hero
+          </button>
+          <button type="button" class="editor-tab-btn px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all cursor-pointer" data-tab="tab-edit-education">
+            🎓 Education
+          </button>
+          <button type="button" class="editor-tab-btn px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all cursor-pointer" data-tab="tab-edit-skills">
+            ⚡ Skills & Levels
+          </button>
+          <button type="button" class="editor-tab-btn px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all cursor-pointer" data-tab="tab-edit-project">
+            🚀 Projects
+          </button>
+          <button type="button" class="editor-tab-btn px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all cursor-pointer" data-tab="tab-edit-contact">
+            📬 Contact Links
+          </button>
+        </div>
+
+        <!-- Customizer Form -->
+        <form id="customizer-form" class="mt-5 space-y-4 text-xs">
+          
+          <!-- Pane 1: Personal & Hero -->
+          <div id="tab-edit-personal" class="editor-pane space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-bold uppercase text-slate-700 mb-1">Full Name</label>
+                <input type="text" id="edit-name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs" />
+              </div>
+              <div>
+                <label class="block font-bold uppercase text-slate-700 mb-1">Headline Badge / Role</label>
+                <input type="text" id="edit-role-tag" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-bold uppercase text-slate-700 mb-1">Location</label>
+              <input type="text" id="edit-location" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs" />
+            </div>
+
+            <div>
+              <label class="block font-bold uppercase text-slate-700 mb-1">Hero Introduction</label>
+              <textarea id="edit-hero-intro" rows="3" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs resize-none"></textarea>
+            </div>
+          </div>
+
+          <!-- Pane 2: Education -->
+          <div id="tab-edit-education" class="editor-pane hidden space-y-4">
+            <div class="p-4 rounded-2xl bg-purple-50/50 border border-purple-100 space-y-3">
+              <span class="font-bold text-purple-900 block">Master of Computer Applications (MCA)</span>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">College / University Name & Location</label>
+                <input type="text" id="edit-mca-college" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-purple-500 text-xs" />
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">MCA Specialization / Focus Overview</label>
+                <textarea id="edit-mca-desc" rows="2" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-purple-500 text-xs resize-none"></textarea>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-blue-50/50 border border-blue-100 space-y-3">
+              <span class="font-bold text-blue-900 block">Bachelor of Computer Applications (BCA)</span>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">College / University Name & Location</label>
+                <input type="text" id="edit-bca-college" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs" />
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">BCA Highlights / Focus Overview</label>
+                <textarea id="edit-bca-desc" rows="2" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs resize-none"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 3: Skills -->
+          <div id="tab-edit-skills" class="editor-pane hidden space-y-3">
+            <p class="text-xs text-slate-500 mb-2">Adjust skill names and proficiency sliders (50% - 100%):</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <!-- Skill 0: HTML5 -->
+              <div class="p-3 rounded-xl border border-slate-200 bg-slate-50/60 space-y-2">
+                <input type="text" id="edit-skill-0-name" class="w-full px-2.5 py-1.5 rounded-lg border border-slate-200 font-bold text-xs" />
+                <div class="flex items-center justify-between gap-3">
+                  <input type="range" id="edit-skill-0-level" min="50" max="100" class="w-full accent-blue-600" />
+                  <span id="edit-skill-0-val" class="font-bold text-blue-600 w-10 text-right">90%</span>
+                </div>
+              </div>
+
+              <!-- Skill 1: CSS3 -->
+              <div class="p-3 rounded-xl border border-slate-200 bg-slate-50/60 space-y-2">
+                <input type="text" id="edit-skill-1-name" class="w-full px-2.5 py-1.5 rounded-lg border border-slate-200 font-bold text-xs" />
+                <div class="flex items-center justify-between gap-3">
+                  <input type="range" id="edit-skill-1-level" min="50" max="100" class="w-full accent-blue-600" />
+                  <span id="edit-skill-1-val" class="font-bold text-blue-600 w-10 text-right">85%</span>
+                </div>
+              </div>
+
+              <!-- Skill 2: JavaScript -->
+              <div class="p-3 rounded-xl border border-slate-200 bg-slate-50/60 space-y-2">
+                <input type="text" id="edit-skill-2-name" class="w-full px-2.5 py-1.5 rounded-lg border border-slate-200 font-bold text-xs" />
+                <div class="flex items-center justify-between gap-3">
+                  <input type="range" id="edit-skill-2-level" min="50" max="100" class="w-full accent-blue-600" />
+                  <span id="edit-skill-2-val" class="font-bold text-blue-600 w-10 text-right">80%</span>
+                </div>
+              </div>
+
+              <!-- Skill 3: PHP -->
+              <div class="p-3 rounded-xl border border-slate-200 bg-slate-50/60 space-y-2">
+                <input type="text" id="edit-skill-3-name" class="w-full px-2.5 py-1.5 rounded-lg border border-slate-200 font-bold text-xs" />
+                <div class="flex items-center justify-between gap-3">
+                  <input type="range" id="edit-skill-3-level" min="50" max="100" class="w-full accent-blue-600" />
+                  <span id="edit-skill-3-val" class="font-bold text-blue-600 w-10 text-right">85%</span>
+                </div>
+              </div>
+
+              <!-- Skill 4: MySQL -->
+              <div class="p-3 rounded-xl border border-slate-200 bg-slate-50/60 space-y-2">
+                <input type="text" id="edit-skill-4-name" class="w-full px-2.5 py-1.5 rounded-lg border border-slate-200 font-bold text-xs" />
+                <div class="flex items-center justify-between gap-3">
+                  <input type="range" id="edit-skill-4-level" min="50" max="100" class="w-full accent-blue-600" />
+                  <span id="edit-skill-4-val" class="font-bold text-blue-600 w-10 text-right">85%</span>
+                </div>
+              </div>
+
+              <!-- Skill 5: Java -->
+              <div class="p-3 rounded-xl border border-slate-200 bg-slate-50/60 space-y-2">
+                <input type="text" id="edit-skill-5-name" class="w-full px-2.5 py-1.5 rounded-lg border border-slate-200 font-bold text-xs" />
+                <div class="flex items-center justify-between gap-3">
+                  <input type="range" id="edit-skill-5-level" min="50" max="100" class="w-full accent-blue-600" />
+                  <span id="edit-skill-5-val" class="font-bold text-blue-600 w-10 text-right">80%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 4: Project -->
+          <div id="tab-edit-project" class="editor-pane hidden space-y-4">
+            <div>
+              <label class="block font-bold uppercase text-slate-700 mb-1">Project Title</label>
+              <input type="text" id="edit-project-title" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs" />
+            </div>
+
+            <div>
+              <label class="block font-bold uppercase text-slate-700 mb-1">Project Description</label>
+              <textarea id="edit-project-desc" rows="4" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs resize-none"></textarea>
+            </div>
+          </div>
+
+          <!-- Pane 5: Contact -->
+          <div id="tab-edit-contact" class="editor-pane hidden space-y-4">
+            <div>
+              <label class="block font-bold uppercase text-slate-700 mb-1">Email Address</label>
+              <input type="email" id="edit-contact-email" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs" />
+            </div>
+
+            <div>
+              <label class="block font-bold uppercase text-slate-700 mb-1">LinkedIn Profile URL</label>
+              <input type="text" id="edit-contact-linkedin" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs" />
+            </div>
+
+            <div>
+              <label class="block font-bold uppercase text-slate-700 mb-1">GitHub Profile URL</label>
+              <input type="text" id="edit-contact-github" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs" />
+            </div>
+
+            <div>
+              <label class="block font-bold uppercase text-slate-700 mb-1">Location</label>
+              <input type="text" id="edit-contact-location" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs" />
+            </div>
+          </div>
+
+          <!-- Modal Footer Actions -->
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-end gap-3">
+            <button type="button" class="close-editor-modal px-4 py-2.5 rounded-xl border border-slate-200 text-slate-700 font-semibold hover:bg-slate-50 transition-colors cursor-pointer">
+              Cancel
+            </button>
+            <button type="submit" class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-md shadow-blue-600/20 hover:shadow-lg transition-all cursor-pointer">
+              Apply & Save Details
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Toast Notification Container (Injected via js/main.js) -->
+  <div id="toast-container"></div>
+
+  <!-- JavaScript Application Bundle -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
