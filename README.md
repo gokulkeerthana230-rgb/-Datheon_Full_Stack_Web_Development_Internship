@@ -48,7 +48,7 @@ project-2-task-manager/
 
 ## 👨‍💻 Developer
 
-**Issac Sam Prakash S**
+**Keerthana R**
 
 ---
 
