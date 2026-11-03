@@ -1,0 +1,57 @@
+# ==============================================================================
+# Git Ignore - Task 3 Weather Forecast
+# ==============================================================================
+
+# Environment variable files and secrets (NEVER commit to GitHub or version control)
+.env
+.env.*
+.ENV
+.ENV.*
+*.env
+*.ENV
+api/.env
+api/.env.*
+api/.ENV
+api/.ENV.*
+api/*.env
+api/*.ENV
+
+# Explicitly preserve example/template files
+!.env.example
+!api/.env.example
+
+# Local configuration overrides that may contain secrets
+config.local.js
+local-config.js
+*.local.js
+
+# Dependencies (if Node/Vite/npm are used)
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Build outputs
+dist/
+build/
+.cache/
+.temp/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor configurations
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
